@@ -1,0 +1,13 @@
+[package]
+name = "fibonacci_elixir_rust_ffi"
+version = "0.1.0"
+authors = []
+edition = "2021"
+
+[lib]
+name = "fibonacci_elixir_rust_ffi"
+path = "src/lib.rs"
+crate-type = ["cdylib"]
+
+[dependencies]
+rustler = "0.34.0"
