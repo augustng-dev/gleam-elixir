@@ -1,5 +1,5 @@
-defmodule FibonacciElixirRustFfi do
-  use Rustler, otp_app: :fibonacci_elixir_rust_ffi, crate: "fibonacci_elixir_rust_ffi"
+defmodule FibonacciGleamElixirRustFfi do
+  use Rustler, otp_app: :fibonacci_gleam_elixir_rust_ffi, crate: "fibonacci_gleam_elixir_rust_ffi"
 
   # Function that will be implemented in Rust.
   # Returns {:ok, result} on success, {:error, error_message} on failure.

@@ -1,16 +1,13 @@
-// import gleam/int
-// import gleam/io
-
 import glychee/benchmark
 import glychee/configuration
 
-@external(erlang, "fibonaccigleamrustffi", "fibo1")
+@external(erlang, "Elixir.FibonacciGleamElixirRustFfi", "fibo1")
 pub fn fibo1(n: Int) -> Int
 
-@external(erlang, "fibonaccigleamrustffi", "fibo2")
+@external(erlang, "Elixir.FibonacciGleamElixirRustFfi", "fibo2")
 pub fn fibo2(n: Int) -> Int
 
-pub fn main() {
+pub fn main() -> Nil {
   configuration.initialize()
   configuration.set_pair(configuration.Warmup, 2)
   configuration.set_pair(configuration.Parallel, 1)
@@ -30,6 +27,6 @@ pub fn main() {
     [benchmark.Data(label: "30", data: 30)],
   )
   // io.println(
-  //   "Fib of " <> int.to_string(30) <> " is: " <> int.to_string(fibo1(30)),
+  //   "Fib of " <> int.to_string(30) <> " is: " <> int.to_string(fib3(30)),
   // )
 }

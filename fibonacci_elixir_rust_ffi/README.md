@@ -1,21 +1,24 @@
 # FibonacciElixirRustFfi
 
-**TODO: Add description**
+## recursive if-else
 
-## Installation
+| v | # | 30 | 35 | 40 | 45 |
+| --- | --- | --- | --- | --- | --- |
+| 1.12.2 | [Elixir](./fibo.ex) (compiled) | 0.00387900 | 0.04201500 | 0.39719000 | 4.80324000 |
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `fibonacci_elixir_rust_ffi` to your list of dependencies in `mix.exs`:
+## optimization
 
-```elixir
-def deps do
-  [
-    {:fibonacci_elixir_rust_ffi, "~> 0.1.0"}
-  ]
-end
+| v | # | 30 | 35 | 40 | 45 |
+| --- | --- | --- | --- | --- | --- |
+| 1.12.2 | [Elixir](./lib/fibonacci_elixir.ex) (compiled) | 0.00000400 | 0.00000400 | 0.00000300 | 0.00003000 |
+
+## run
+
 ```
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at <https://hexdocs.pm/fibonacci_elixir_rust_ffi>.
-
+iex -S mix
+FibonacciElixirRustFfi.start("f1", 30)
+FibonacciElixirRustFfi.start("f1t", 30)
+FibonacciElixirRustFfi.start("f2", 30)
+FibonacciElixirRustFfi.start("f2t", 30)
+FibonacciElixirRustFfi.benchmark(30)
+```

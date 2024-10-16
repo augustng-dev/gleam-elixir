@@ -1,4 +1,4 @@
-defmodule FibonacciElixir do
+defmodule FibonacciGleamElixirFfi do
   def f1(n) do
     cond do
       n == 0 -> 0

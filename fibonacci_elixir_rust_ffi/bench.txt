@@ -1,0 +1,31 @@
+n = 30
+
+Operating System: Linux
+CPU Information: Intel(R) Core(TM) i7-6820HQ CPU @ 2.70GHz
+Number of Available Cores: 8
+Available memory: 3.77 GB
+Elixir 1.17.3
+Erlang 26.2.5.4
+JIT enabled: true
+
+Benchmark suite executing with the following configuration:
+warmup: 2 s
+time: 5 s
+memory time: 0 ns
+reduction time: 0 ns
+parallel: 1
+inputs: none specified
+Estimated total run time: 14 s
+
+Benchmarking f1 ...
+Benchmarking f2 ...
+Calculating statistics...
+Formatting results...
+
+Name           ips        average  deviation         median         99th %
+f2          5.23 M     0.00019 ms   ±368.39%     0.00020 ms     0.00060 ms
+f1       0.00031 M        3.22 ms    ±21.74%        3.06 ms        6.60 ms
+
+Comparison:
+f2          5.23 M
+f1       0.00031 M - 16863.52x slower +3.22 ms

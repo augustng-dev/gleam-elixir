@@ -15,9 +15,12 @@
 ## run
 
 ```
-mix escript.build
-time ./fibonacci_elixir f1 30
-time ./fibonacci_elixir f1t 30
-time ./fibonacci_elixir f2 30
-time ./fibonacci_elixir f2t 30
+iex -S mix
+FibonacciElixir.start("f1", 30)
+FibonacciElixir.start("f1t", 30)
+FibonacciElixir.start("f2", 30)
+FibonacciElixir.start("f2t", 30)
+FibonacciElixir.start("f3", 30)
+FibonacciElixir.start("f3t", 30)
+FibonacciElixir.benchmark(30)
 ```

@@ -1,0 +1,29 @@
+Operating System: Linux
+CPU Information: Intel(R) Core(TM) i7-6820HQ CPU @ 2.70GHz
+Number of Available Cores: 8
+Available memory: 3.77 GB
+Elixir 1.17.3
+Erlang 26.2.5.4
+JIT enabled: true
+
+Benchmark suite executing with the following configuration:
+warmup: 2 s
+time: 5 s
+memory time: 0 ns
+reduction time: 0 ns
+parallel: 1
+inputs: none specified
+Estimated total run time: 14 s
+
+Benchmarking fibo1 ...
+Benchmarking fibo2 ...
+Calculating statistics...
+Formatting results...
+
+Name            ips        average  deviation         median         99th %
+fibo2        6.82 M     0.00015 ms   ±952.11%     0.00010 ms     0.00030 ms
+fibo1     0.00033 M        3.01 ms    ±11.52%        2.91 ms        4.39 ms
+
+Comparison:
+fibo2        6.82 M
+fibo1     0.00033 M - 20567.22x slower +3.01 ms

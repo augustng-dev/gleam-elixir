@@ -2,3 +2,8 @@
 *.ez
 /build
 erl_crash.dump
+**/target
+/Cargo.lock
+/priv/*.so
+/priv/*.dll
+.DS_Store

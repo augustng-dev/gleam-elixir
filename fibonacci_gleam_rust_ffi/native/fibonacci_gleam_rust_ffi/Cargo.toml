@@ -1,13 +1,13 @@
 [package]
-name = "fibonacci_elixir_rust_ffi"
+name = "fibonacci_gleam_rust_ffi"
 version = "0.1.0"
 authors = []
 edition = "2021"
 
 [lib]
-name = "fibonacci_elixir_rust_ffi"
+name = "fibonacci_gleam_rust_ffi"
 path = "src/lib.rs"
-crate-type = ["cdylib"]
+crate-type = ["dylib"]
 
 [dependencies]
 rustler = { version = "0.34.0", features = ["nif_version_2_17"] }
