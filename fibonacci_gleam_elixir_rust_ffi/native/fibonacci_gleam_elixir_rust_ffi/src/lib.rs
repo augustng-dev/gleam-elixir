@@ -1,13 +1,5 @@
-use rustler::{Atom};
-
-mod atoms {
-    rustler::atoms! {
-        ok,
-    }
-}
-
 #[rustler::nif]
-fn fibo1(n: u64) -> (Atom, u64) {
+fn fibo1(n: u64) -> u64 {
     fn fib(n: u64) -> u64 {
         match n {
             0 => 0,
@@ -15,11 +7,11 @@ fn fibo1(n: u64) -> (Atom, u64) {
             _ => fib(n - 1) + fib(n - 2),
         }
     }
-    (atoms::ok(), fib(n))
+    fib(n)
 }
 
 #[rustler::nif]
-fn fibo2(n: u64) -> (Atom, u64) {
+fn fibo2(n: u64) -> u64 {
     let result = match n {
         0 => 0,
         1 => 1,
@@ -34,7 +26,7 @@ fn fibo2(n: u64) -> (Atom, u64) {
             b
         }
     };
-    (atoms::ok(), result)
+    result
 }
 
 rustler::init!("Elixir.FibonacciGleamElixirRustFfi");

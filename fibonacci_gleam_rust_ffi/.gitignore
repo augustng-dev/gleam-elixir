@@ -7,3 +7,6 @@ erl_crash.dump
 /priv/*.so
 /priv/*.dll
 .DS_Store
+deps
+_build
+priv
